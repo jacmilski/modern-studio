@@ -20,7 +20,12 @@
     "import/prefer-default-export": "warn",
     "import/no-unresolved": "off",
     "no-useless-escape": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "react/function-component-definition": "off",
+    "max-len": "off",
+    "react/button-has-type": "off",
+    "react/self-closing-comp": "off",
+    "react/prop-types": "off"
   },
   "overrides": [
     {

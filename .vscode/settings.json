@@ -18,5 +18,6 @@
   "eslint.quiet": true,
   "eslint.run": "onSave",
   "eslint.lintTask.enable": true,
-  "eslint.nodePath": ""
+  "eslint.nodePath": "",
+  "sqltools.autoConnectTo": ""
 }
