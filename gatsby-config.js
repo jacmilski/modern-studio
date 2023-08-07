@@ -24,7 +24,7 @@ module.exports = {
       options: {
         fonts: [
           'montserrat\:300,400,500,700',
-          'cormorant garamond\:500',
+          'cormorant garamond\:300,500',
         ],
         display: 'swap',
       },
@@ -47,6 +47,14 @@ module.exports = {
         // root: path.join(__dirname, 'src'),
         assets: path.join(__dirname, 'src', 'assets'),
         components: path.join(__dirname, 'src', 'components'),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
     {
