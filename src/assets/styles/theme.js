@@ -1,4 +1,7 @@
+// @ts-nocheck
 /* eslint-disable linebreak-style */
+import { css } from 'styled-components';
+
 const theme = {
   color: {
     beige: 'hsl(33, 23%, 83%)',
@@ -35,6 +38,52 @@ const theme = {
     desktop: '@media (min-width: 1024px)',
     bigDesktop: '@media (min-width: 1280px)',
     huge: '@media (min-width: 1440px)',
+  },
+  effect: {
+    /**
+     * @param {('leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom' )} position
+     * @param size
+     * @param color
+      */
+    corner: ({ position = 'leftTop', size = '70px', color = theme.color.black }) => css`
+      &::after {
+        position: absolute;
+        width: ${size};
+        height: ${size};
+        content: '';
+        background-color: ${() => color};
+        ${() => {
+    switch (position) {
+      case 'leftTop':
+        return css`
+          clip-path: polygon(0 0, 100 % 0, 100 % 100 %, 84 % 100 %, 84 % 16 %, 0 16 %);
+          left: -20px;
+          top: -20px;
+          `;
+      case 'rightTop':
+        return css`
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 84% 100%, 84% 16%, 0 16%);
+          right: -20px;
+          top: -20px;
+          `;
+      case 'leftBottom':
+        return css`
+          clip-path: polygon(0 0, 16% 0, 16% 84%, 100% 84%, 100% 100%, 0 100%);
+          left: -20px;
+          bottom: -20px;
+          `;
+      case 'rightBottom':
+        return css`
+          clip-path: polygon(84% 0, 100% 0, 100% 100%, 0 100%, 0 84%, 84% 84%);
+          right: -20px;
+          bottom: -20px;
+          `;
+      default:
+        return {};
+    }
+  }}
+      }
+    `,
   },
 };
 

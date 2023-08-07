@@ -2,6 +2,7 @@
 // @ts-nocheck
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import HighLightedHeading from '../components/HighLightedHeading/HighLightedHeading';
 
 import {
   Hero,
@@ -11,7 +12,6 @@ import {
   WelcomeSection,
   WelcomeSectionContent,
   WelcomeSectionImage,
-  HighLightedHeading,
   StyledList,
   StyledButton,
   ShowcaseSection,
@@ -143,7 +143,7 @@ function HomePage({ data }) {
           </div>
         </ReviewSection>
         <ContactForm action="#">
-          <HighLightedHeading>Napisz do nas</HighLightedHeading>
+          <HighLightedHeading level="3">Napisz do nas</HighLightedHeading>
           <label htmlFor="email">Adres e-mail</label>
           <input type="email" name="email" id="email" />
           <label htmlFor="message">Adres e-mail</label>

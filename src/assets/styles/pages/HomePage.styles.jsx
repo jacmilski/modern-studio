@@ -58,17 +58,12 @@ export const WelcomeSectionContent = styled.div`
     color: white;
   }
 
-  &::after {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 70px;
-    height: 70px;
-    content: '';
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 84% 100%, 84% 16%, 0 16%);
-    background-color: ${({ theme }) => theme.color.black};
+  ${({ theme }) => theme.effect.corner({
+    position: 'rightTop',
+    size: '70px',
+    color: theme.color.black,
+  })};
 
-  }
 `;
 
 export const WelcomeSectionImage = styled(({ image, ...props }) => <div {...props} />)`
@@ -82,35 +77,14 @@ export const WelcomeSectionImage = styled(({ image, ...props }) => <div {...prop
   background-repeat: no-repeat;
   background-position: 100%;
 
-    &::before {
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
-    width: 70px;
-    height: 70px;
-    content: '';
-    clip-path: polygon(16% 0, 16% 84%, 100% 84%, 100% 100%, 0 100%, 0 0);
-    background-color: ${({ theme }) => theme.color.beige};
-  }
+  ${({ theme }) => theme.effect.corner({
+    position: 'leftBottom',
+    size: '70px',
+    color: theme.color.beige,
+  })};
 `;
 
 export const AdvantagesSection = styled(StyledSection)``;
-
-export const HighLightedHeading = styled.h2`
-    position: relative;
-    font-size: ${({ theme }) => theme.font.size.headingSmall};
-
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: calc(${({ theme }) => theme.font.size.headingSmall} * 1.5);
-      top: calc(-${({ theme }) => theme.font.size.headingSmall} / 6);
-      left: -50%;
-      background-color: ${({ theme }) => theme.color.beige};
-      z-index: -1;
-    }
-`;
 
 export const StyledList = styled.ul`
   padding: 0;
