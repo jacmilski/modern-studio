@@ -27,6 +27,7 @@ import {
   ReviewSection,
   ContactForm,
   TeamImage,
+  StyledReview,
 } from '../assets/styles/pages/HomePage.styles';
 
 function HomePage({ data }) {
@@ -92,54 +93,65 @@ function HomePage({ data }) {
             <ShowcaseImage src={data.grid4.publicURL} alt="grid4" />
             <ShowcaseImage isBig src={data.grid5.publicURL} alt="grid5" />
           </ShowcaseGallery>
-          <ServicesSection>
-            <HighLightedHeading>Twój komfort ponad wszystko</HighLightedHeading>
-            <p>To, co dla innych biur nieruchomości wykracza poza zakres usług, dla nas jest standardem. Wyróżnia nas bezkompromisowa troska o interes klienta.</p>
-            <StyledButton isCentered>Sprawdź pełen zakres naszych usług</StyledButton>
-            <StyledList>
-              <li>
-                <h3>Pośrednictwo</h3>
-                <p>Profesjonalne i kompleksowe usługi pośrednictwa w sprzedaży, zakupie, wynajmie lub najmie nieruchomości</p>
-              </li>
-              <li>
-                <h3>Doradztwo</h3>
-                <p>Współpracujemy z najlepszymi kancelariami prawnymi i notarialnymi, zapewniamy fachowe doradztwo w zakresie kredytowania i ubezpieczeń.</p>
-              </li>
-              <li>
-                <h3>Home staging</h3>
-                <p>Modna i funkcjonalna metamorfoza wnętrza mieszkania, domu czy biura podnosi atrakcyjność oferty na rynku.</p>
-              </li>
-              <li>
-                <h3>Współpraca</h3>
-                <p>Poznański rynek znamy jak własną kieszeń - współpracując z nami wybierasz najlepszych deweloperów, prawników i architektów.</p>
-              </li>
-            </StyledList>
-          </ServicesSection>
+
         </ShowcaseSection>
+        <ServicesSection>
+          <div>
+            <HighLightedHeading>Twój komfort ponad wszystko</HighLightedHeading>
+            <StyledLinkButtonWrapper>
+              <StyledLinkButton to="#" isCentered>Sprawdź pełen zakres naszych usług</StyledLinkButton>
+              <StyledArrowIcon />
+            </StyledLinkButtonWrapper>
+          </div>
+          <p>To, co dla innych biur nieruchomości wykracza poza zakres usług, dla nas jest standardem. Wyróżnia nas bezkompromisowa troska o interes klienta.</p>
+          <StyledList>
+            <li>
+              <h3>Pośrednictwo</h3>
+              <p>Profesjonalne i kompleksowe usługi pośrednictwa w sprzedaży, zakupie, wynajmie lub najmie nieruchomości</p>
+            </li>
+            <li>
+              <h3>Doradztwo</h3>
+              <p>Współpracujemy z najlepszymi kancelariami prawnymi i notarialnymi, zapewniamy fachowe doradztwo w zakresie kredytowania i ubezpieczeń.</p>
+            </li>
+            <li>
+              <h3>Home staging</h3>
+              <p>Modna i funkcjonalna metamorfoza wnętrza mieszkania, domu czy biura podnosi atrakcyjność oferty na rynku.</p>
+            </li>
+            <li>
+              <h3>Współpraca</h3>
+              <p>Poznański rynek znamy jak własną kieszeń - współpracując z nami wybierasz najlepszych deweloperów, prawników i architektów.</p>
+            </li>
+          </StyledList>
+        </ServicesSection>
         <TeamSection>
-          <HighLightedHeading>Poznaj nasz zespół</HighLightedHeading>
-          <p>
-            Dzięki doskonałej współpracy i przyjacielskiej atmosferze
-            udało nam się stworzyć zespół dokosnały.
-          </p>
-          <StyledLinkButtonWrapper>
-            <StyledLinkButton to="#">Sprawdź kim jesteśmy</StyledLinkButton>
-            <StyledArrowIcon />
-          </StyledLinkButtonWrapper>
+          <div>
+            <HighLightedHeading>Poznaj nasz zespół</HighLightedHeading>
+            <p>
+              Dzięki doskonałej współpracy i przyjacielskiej atmosferze
+              udało nam się stworzyć zespół dokosnały.
+            </p>
+            <StyledLinkButtonWrapper>
+              <StyledLinkButton to="#">Sprawdź kim jesteśmy</StyledLinkButton>
+              <StyledArrowIcon />
+            </StyledLinkButtonWrapper>
+          </div>
           <TeamImage image={data.team1.publicURL} />
+          <TeamImage image={data.team2.publicURL} />
         </TeamSection>
         <ReviewSection>
-          <HighLightedHeading>Co mówią o nas nasi klienci?</HighLightedHeading>
-          <p>Bezkompromisowo wspieramy naszych klientów a ich satysfakcja jest dla nas najważniejszym celem.</p>
           <div>
-            <div>
+            <HighLightedHeading>Co mówią o nas nasi klienci?</HighLightedHeading>
+            <p>Bezkompromisowo wspieramy naszych klientów a ich satysfakcja jest dla nas najważniejszym celem.</p>
+          </div>
+          <div>
+            <StyledReview>
               <p>Udało się znaleźć kupca na nasze mieszkanie w jedne dzień! Cały proces był przeprowadzony bardzo sprawnie, profesjonalnie i dla nas jako klientów bezboleśnie. Ania ma prawdziwy dar tłumaczenia zawiłości i dopinania detali.</p>
               <p>Katarzyna</p>
-            </div>
-            <div>
+            </StyledReview>
+            <StyledReview>
               <p>Współpraca na najwyższym poziomie. Jeśli zależy Wam na szybkiej, bezproblemowej  sprzedaży czy zakupie mieszkania/ domu to nie ma lepszego miejsca.</p>
               <p>Kamila</p>
-            </div>
+            </StyledReview>
           </div>
         </ReviewSection>
         <ContactForm action="#">

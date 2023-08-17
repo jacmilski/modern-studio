@@ -18,10 +18,10 @@ const theme = {
   font: {
     shadow: '5px 5px 10px hsla(0, 0%, 0%,0.15)',
     size: {
-      heading: '5rem',
+      heading: '3.5rem',
       headingMobile: '3rem', /* its main, was 5.3rem */
-      headingSmall: '2.8rem', /* its main, was 4.2 */
-      paragraph: '1.5rem',
+      headingSmall: '2.4rem', /* its main, was 4.2 */
+      paragraph: '1.15rem',
       caption: '1.35rem',
       mobileMenu: '1.6rem', /* its main - was 2.1 */
       button: '1.2rem',
@@ -44,9 +44,13 @@ const theme = {
      * @param {('leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom' )} position
      * @param size
      * @param color
+     * @param {('before' | 'after')} pseudoelement
+     * @param distance
       */
-    corner: ({ position = 'leftTop', size = '70px', color = theme.color.black }) => css`
-      &::after {
+    corner: ({
+      position = 'leftTop', size = '70px', distance = '-20px', color = theme.color.black, pseudoelement = 'after',
+    }) => css`
+      &::${pseudoelement} {
         position: absolute;
         width: ${size};
         height: ${size};
@@ -57,26 +61,26 @@ const theme = {
       case 'leftTop':
         return css`
           clip-path: polygon(0 0, 100 % 0, 100 % 100 %, 84 % 100 %, 84 % 16 %, 0 16 %);
-          left: -20px;
-          top: -20px;
+          left: ${distance};
+          top: ${distance};
           `;
       case 'rightTop':
         return css`
           clip-path: polygon(0 0, 100% 0, 100% 100%, 84% 100%, 84% 16%, 0 16%);
-          right: -20px;
-          top: -20px;
+          right: ${distance};
+          top: ${distance};
           `;
       case 'leftBottom':
         return css`
           clip-path: polygon(0 0, 16% 0, 16% 84%, 100% 84%, 100% 100%, 0 100%);
-          left: -20px;
-          bottom: -20px;
+          left: ${distance};
+          bottom: ${distance};
           `;
       case 'rightBottom':
         return css`
           clip-path: polygon(84% 0, 100% 0, 100% 100%, 0 100%, 0 84%, 84% 84%);
-          right: -20px;
-          bottom: -20px;
+          right: ${distance};
+          bottom: ${distance};
           `;
       default:
         return {};
