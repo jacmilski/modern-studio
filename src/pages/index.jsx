@@ -3,12 +3,11 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import HighLightedHeading from '../components/HighLightedHeading/HighLightedHeading';
-
+import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
 import {
   Hero,
   HeroHeading,
   HeroParagraph,
-  ContentWrapper,
   WelcomeSection,
   WelcomeSectionContent,
   WelcomeSectionImage,
@@ -93,7 +92,6 @@ function HomePage({ data }) {
             <ShowcaseImage src={data.grid4.publicURL} alt="grid4" />
             <ShowcaseImage isBig src={data.grid5.publicURL} alt="grid5" />
           </ShowcaseGallery>
-
         </ShowcaseSection>
         <ServicesSection>
           <div>
