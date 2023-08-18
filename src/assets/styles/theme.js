@@ -25,8 +25,8 @@ const theme = {
       caption: '1.35rem',
       mobileMenu: '1.6rem', /* its main - was 2.1 */
       button: '1.2rem',
-      thumbnail: '1.8rem',
-      thumbnailSmall: '1.4rem',
+      thumbnail: '1.6rem',
+      thumbnailSmall: '1.3rem',
     },
     family: {
       montserrat: '"Montserrat", sans-serif',

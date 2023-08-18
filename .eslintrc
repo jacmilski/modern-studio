@@ -26,7 +26,8 @@
     "react/button-has-type": "off",
     "react/self-closing-comp": "off",
     "react/prop-types": "off",
-    "no-unused-vars":"warn"
+    "no-unused-vars":"warn",
+    "arrow-body-style": "off"
   },
   "overrides": [
     {
@@ -37,7 +38,7 @@
         }
     },
     {
-        "files": ["gatsby-browser.js"],
+        "files": ["gatsby-browser.jsx", "gatsby-ssr.jsx"],
         "rules": {
             "no-unused-expressions":"off"
         }

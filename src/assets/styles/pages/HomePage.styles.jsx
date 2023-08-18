@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import ArrowIcon from '../arrow.svg';
-import HighLightedHeading from '../../../components/HighLightedHeading/HighLightedHeading';
 
 export const Hero = styled(({ image, ...props }) => <div {...props} />)`
   width: 100%;
@@ -34,16 +33,6 @@ export const HeroHeading = styled.h1`
 export const HeroParagraph = styled.p`
   font-size: ${({ theme }) => theme.font.size.paragraph};
   text-shadow: ${({ theme }) => theme.font.shadow};
-`;
-
-export const ContentWrapper = styled.div`
-  padding: 0 20px;
-
-  ${({ theme }) => theme.mq.desktop} {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 100px;
-  }
 `;
 
 const StyledSection = styled.section`
