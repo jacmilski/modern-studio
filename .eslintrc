@@ -38,7 +38,7 @@
         }
     },
     {
-        "files": ["gatsby-browser.jsx", "gatsby-ssr.jsx"],
+        "files": ["gatsby-browser.jsx", "gatsby-ssr.jsx", "*.styles.*"],
         "rules": {
             "no-unused-expressions":"off"
         }
