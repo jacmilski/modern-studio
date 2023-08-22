@@ -41,14 +41,14 @@ const theme = {
   },
   effect: {
     /**
-     * @param {('leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom' )} position
+     * @param {('leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom')} position
      * @param size
      * @param color
      * @param {('before' | 'after')} pseudoelement
      * @param distance
       */
     corner: ({
-      position = 'leftTop', size = '70px', distance = '-20px', color = theme.color.black, pseudoelement = 'after',
+      position = 'leftBottom', size = '70px', distance = '-20px', color = theme.color.black, pseudoelement = 'after',
     }) => css`
       &::${pseudoelement} {
         position: absolute;
@@ -60,7 +60,7 @@ const theme = {
     switch (position) {
       case 'leftTop':
         return css`
-          clip-path: polygon(0 0, 100 % 0, 100 % 100 %, 84 % 100 %, 84 % 16 %, 0 16 %);
+          clip-path: polygon(0 0, 100% 0, 100% 16%, 16% 16%, 16% 100%, 0 100%);
           left: ${distance};
           top: ${distance};
           `;
