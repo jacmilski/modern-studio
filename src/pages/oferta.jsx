@@ -2,145 +2,21 @@
 import React from 'react';
 import { styled } from 'styled-components';
 import { graphql } from 'gatsby';
-import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
 import HighLightedHeading from '../components/HighLightedHeading/HighLightedHeading';
 import AreaIcon from '../assets/icons-components/area.svg';
 import AvailabilityIcon from '../assets/icons-components/availability.svg';
 import BuildingTypeIcon from '../assets/icons-components/building-type.svg';
 import RoomsIcon from '../assets/icons-components/rooms.svg';
 import OfferType from '../assets/icons-components/offer-type.svg';
-
-const Address = styled.p`
-    font-weight: 700;
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 60%;
-        height: 1px;
-        background-color: black;
-        bottom: -5px;
-        left: 0;
-    }
-`;
-
-const OfferDetailsList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 50px 0;
-  
-  li {
-    display: flex;
-    margin: 20px 0;
-    
-    p {
-      font-size: ${({ theme }) => theme.font.size.paragraph};
-      margin: 3px 15px;
-    }
-
-    p:first-child {
-      font-weight: 700;
-    }
-  }
-
-  ${({ theme }) => theme.mq.desktop} {
-    margin: 30px 0;
-
-    li {
-      padding: 10px 0; 
-    }
-
-    li div p {
-      display: inline-block;
-    }
-  }
-`;
-
-const ContactDetails = styled.div`
-  display: flex;
-  margin-bottom: 50px;
-
-  
-  img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-  }
-
-  p {
-    font-size: ${({ theme }) => theme.font.size.paragraph};
-    margin: 0;
-  }
-
-  p:first-child {
-    font-weight: 700;
-  }
-`;
-
-const Gallery = styled.div`
-  width: 100%;
-
-  img {
-    width: 100%;
-    max-height: 400px;
-  }
-`;
-
-const OfferDescription = styled.p`
-  position: relative;
-  font-size: ${({ theme }) => theme.font.size.paragraph};
-
-  ${({ theme }) => theme.mq.desktop} {
-    top: -90px;
-  }
-
-  ${({ theme }) => theme.mq.bigDesktop} {
-    top: -100px;
-  }
-
-  ${({ theme }) => theme.mq.huge} {
-    top: -120px;
-  }
-`;
-
-const OfferTitle = styled.p``;
-
-const StyledContentWrapper = styled(ContentWrapper)`
-  display: grid;
-  grid-template-columns: 1fr;
-  
-  ${({ theme }) => theme.mq.desktop} {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-
-    ${Gallery} {
-      grid-column: 1 / 3;
-      grid-row: 1 / 2;
-    }
-  
-    ${OfferTitle} {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-    }
-  
-    ${OfferDescription} {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-    }
-  
-    ${OfferDetailsList} {
-      grid-column: 2 / 3;
-      grid-row: 2 / 4;
-    }
-  
-    ${ContactDetails} {
-      grid-column: 1 / 2;
-      grid-row: 4 / 5;
-    }
-  }
-
-`;
+import {
+  Address,
+  OfferDetailsList,
+  ContactDetails,
+  Gallery,
+  OfferDescription,
+  OfferTitle,
+  StyledContentWrapper,
+} from '../assets/styles/pages/Oferta.styles';
 
 const Oferta = ({ data }) => {
   return (
