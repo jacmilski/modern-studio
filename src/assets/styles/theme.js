@@ -18,7 +18,7 @@ const theme = {
   font: {
     shadow: '5px 5px 10px hsla(0, 0%, 0%,0.15)',
     size: {
-      heading: '3.5rem',
+      heading: '1.1rem', // its main, was 3.5rem
       headingMobile: '3rem', /* its main, was 5.3rem */
       headingSmall: '2.4rem', /* its main, was 4.2 */
       paragraph: '1.15rem',
