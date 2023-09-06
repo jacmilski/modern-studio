@@ -11,7 +11,6 @@ import {
   WelcomeSection,
   WelcomeSectionContent,
   WelcomeSectionImage,
-  StyledList,
   StyledButton,
   ShowcaseSection,
   ShowcaseButtonsContainer,
@@ -28,6 +27,7 @@ import {
   TeamImage,
   StyledReview,
 } from '../assets/styles/pages/HomePage.styles';
+import { StyledList } from '../components/StyledList/StyledList.styles';
 
 function HomePage({ data }) {
   const hero = data.hero.publicURL;

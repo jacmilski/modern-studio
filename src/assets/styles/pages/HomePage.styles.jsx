@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import ArrowIcon from '../arrow.svg';
+import { StyledList } from '../../../components/StyledList/StyledList.styles';
 
 export const Hero = styled(({ image, ...props }) => <div {...props} />)`
   width: 100%;
@@ -130,31 +131,6 @@ export const AdvantagesSection = styled(StyledSection)`
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-`;
-
-export const StyledList = styled.ul`
-  padding: 0;
-  list-style: none; 
-
-  li {
-    margin: 30px 0;
-  }
-
-  h3 {
-    font-family: ${({ theme }) => theme.font.family.montserrat};
-    font-weight: 700;
-    margin: 0;
-  }
-
-  p {
-    font-size: ${({ theme }) => theme.font.size.paragraph};
-  }
-
-  ${({ theme }) => theme.mq.desktop} {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
   }
 `;
 
