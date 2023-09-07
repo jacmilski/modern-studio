@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from 'react';
-import { styled } from 'styled-components';
 import { graphql } from 'gatsby';
 import HighLightedHeading from '../components/HighLightedHeading/HighLightedHeading';
 import AreaIcon from '../assets/icons-components/area.svg';

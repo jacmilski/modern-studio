@@ -8,7 +8,6 @@ import KeyIcon from '../assets/icons-components/key.svg';
 import PeopleIcon from '../assets/icons-components/people.svg';
 import SuitcaseIcon from '../assets/icons-components/suitcase.svg';
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
-import HighLightedHeading from '../components/HighLightedHeading/HighLightedHeading';
 import {
   Hero,
   HeroInfo,
@@ -32,11 +31,11 @@ const Uslugi = ({ data }) => {
           <p>
             Poziom zaangażowania i zakres usług Modern Studio wykracza daleko poza to, co oferują inne biura nieruchomości - sprawdź, jak możemy Ci pomóc.
           </p>
-          <a href="/">Czytaj dalej</a>
+          <a href="#szczegoly">Czytaj dalej</a>
         </HeroInfo>
       </Hero>
 
-      <StyledHighligtedHeading>Jak możemy Ci pomóc?</StyledHighligtedHeading>
+      <StyledHighligtedHeading id="szczegoly">Jak możemy Ci pomóc?</StyledHighligtedHeading>
       <ServicesStyledList>
         <li>
           <PeopleIcon />

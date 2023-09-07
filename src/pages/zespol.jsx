@@ -8,7 +8,7 @@ import PhoneIcon from '../assets/icons-components/phone.svg';
 // @ts-ignore
 import MailIcon from '../assets/icons-components/mail.svg';
 
-const zespol = ({ data }) => {
+const Zespol = ({ data }) => {
   return (
     <ContentWrapper isSubpage>
       <Hero image={data.hero0.publicURL}>
@@ -141,4 +141,4 @@ export const pageQuery = graphql`
     }
 `;
 
-export default zespol;
+export default Zespol;
