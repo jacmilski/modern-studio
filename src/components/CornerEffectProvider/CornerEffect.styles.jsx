@@ -1,5 +1,5 @@
+/* eslint-disable linebreak-style */
 // @ts-nocheck
-import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
 
 const showLeftTopCorner = keyframes`

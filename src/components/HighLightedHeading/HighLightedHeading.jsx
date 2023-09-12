@@ -1,12 +1,11 @@
-/* eslint-disable no-undef */
 // @ts-nocheck
 import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import throttle from 'lodash.throttle';
-import { StyledHeading } from './HighLightedHeading.styles';
+import { StyledHeading } from './HighlightedHeading.styles';
 
-const HighLightedHeading = ({
-  level, children, isRight, width,
+export const HighlightedHeading = ({
+  width, level = '2', children, isRight = false, ...props
 }) => {
   const headingRef = useRef(null);
   const [playState, setPlayState] = useState(false);
@@ -27,29 +26,13 @@ const HighLightedHeading = ({
   }, []);
 
   return (
-    <StyledHeading
-      playState={playState}
-      ref={headingRef}
-      width={width}
-      isRight={isRight}
-      as={`h${level}`}
-    >
-      {children}
-    </StyledHeading>
+    <StyledHeading playState={playState} ref={headingRef} width={width} isRight={isRight} as={`h${level}`} {...props}>{children}</StyledHeading>
   );
 };
 
-HighLightedHeading.propTypes = {
+HighlightedHeading.propTypes = {
   children: PropTypes.node.isRequired,
   level: PropTypes.string,
   isRight: PropTypes.bool,
   width: PropTypes.string,
 };
-
-HighLightedHeading.defaultProps = {
-  level: '2',
-  isRight: false,
-  width: '50%',
-};
-
-export default HighLightedHeading;

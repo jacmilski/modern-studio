@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const path = require('path');
 
 const gatsbyRequiredRules = path.join(
@@ -34,6 +35,7 @@ module.exports = {
       options: {
         accessToken: 'K5cvi_zauxjDBhPXxC6aLycxAgY3bu2xplUqVhKwr4Y',
         spaceId: 'zeg7esyhyv8y',
+        // zeg7esyhyv8y
       },
     },
     'gatsby-plugin-lodash',

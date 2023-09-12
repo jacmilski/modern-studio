@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // @ts-nocheck
 import React from 'react';
 import styled from 'styled-components';

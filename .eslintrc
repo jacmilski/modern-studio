@@ -12,36 +12,41 @@
     }
   },
   "env": {
-    "node": true
+    "node": true,
+    "browser": true
   },
-  "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "rules": {
-    "react/jsx-props-no-spreading": "off",
-    "import/prefer-default-export": "warn",
-    "import/no-unresolved": "off",
     "no-useless-escape": "off",
-    "linebreak-style": "off",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "warn",
+    "import/no-unresolved": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": "off",
-    "max-len": "off",
     "react/button-has-type": "off",
     "react/self-closing-comp": "off",
-    "react/prop-types": "off",
-    "no-unused-vars":"warn",
-    "arrow-body-style": "off"
+    "react/prop-types": "warn",
+    "react/destructuring-assignment": "warn",
+    "no-debugger": "off",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "react/require-default-props": "off"
   },
   "overrides": [
     {
-        "files": ["./src/pages/*.jsx"],
-        "rules": {
-            "no-unused-expressions":"off",
-            "import/no-default-export": "off"
-        }
-    },
-    {
-        "files": ["gatsby-browser.jsx", "gatsby-ssr.jsx", "*.styles.*"],
-        "rules": {
-            "no-unused-expressions":"off"
-        }
+      "files": ["./src/pages/*.jsx"],
+      "rules": {
+        "no-unused-expressions": "off",
+        "import/no-default-export": "off"
+      }
+    }, {
+      "files": ["gatsby-browser.js", "gatsby-ssr.js", "*.styles.*"],
+      "rules": {
+        "react/jsx-filename-extension": "off"
+      }
     }
   ]
 }

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import styled from 'styled-components';
 import { ContentWrapper } from '../../../components/ContentWrapper/ContentWrapper.styles';
 

@@ -1,5 +1,4 @@
 // @ts-nocheck
-/* eslint-disable no-undef */
 import React, { useEffect, useRef, useState } from 'react';
 import throttle from 'lodash.throttle';
 import PropTypes from 'prop-types';
@@ -7,12 +6,12 @@ import { CornerEffectWrapper } from './CornerEffect.styles';
 
 export const CornerEffect = ({
   children,
-  position,
-  distance,
-  size,
-  color,
-  pseudoelement,
-  offset,
+  position = 'topLeft',
+  distance = '20px',
+  size = '70px',
+  color = 'dark',
+  pseudoelement = 'after',
+  offset = '400',
   ...props
 }) => {
   const itemRef = useRef(null);
@@ -58,13 +57,4 @@ CornerEffect.propTypes = {
   pseudoelement: PropTypes.oneOf(['after', 'before']),
   distance: PropTypes.string,
   children: PropTypes.node.isRequired,
-};
-
-CornerEffect.defaultProps = {
-  position: 'topLeft',
-  size: '70px',
-  distance: '20px',
-  color: 'dark',
-  offset: '400',
-  pseudoelement: 'after',
 };

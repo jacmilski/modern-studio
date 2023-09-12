@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import styled from 'styled-components';
 
 export const StyledIconWrapper = styled.span`

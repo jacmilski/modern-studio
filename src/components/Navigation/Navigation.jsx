@@ -1,15 +1,14 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import FacebookIcon from '../../assets/icons-components/facebook.svg';
-import InstagramIcon from '../../assets/icons-components/instagram.svg';
+import FacebookIcon from 'assets/icons-components/facebook.svg';
+import InstagramIcon from 'assets/icons-components/instagram.svg';
 import {
   OuterWrapper,
   StyledBurger,
-  Wrapper,
   StyledLogo,
-  StyledSocialIcon,
-  StyledNavigation,
+  StyledNavigation, StyledSocialIcon,
+  Wrapper,
 } from './Navigation.styles';
 
 export const Navigation = () => {
