@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
 import { graphql } from 'gatsby';

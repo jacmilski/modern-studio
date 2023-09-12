@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled, { keyframes, css } from 'styled-components';
 
 const showTopLeftCorner = keyframes`

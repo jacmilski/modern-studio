@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import throttle from 'lodash.throttle';
 import PropTypes from 'prop-types';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled, { keyframes } from 'styled-components';
 
 const appearAnimation = keyframes`

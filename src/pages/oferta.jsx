@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
 import AreaIcon from 'assets/icons-components/area.svg';

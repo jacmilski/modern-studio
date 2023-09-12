@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import FacebookIcon from 'assets/icons-components/facebook.svg';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import BlocksIcon from 'assets/icons-components/blocks.svg';
 import ConsultancyIcon from 'assets/icons-components/consultancy.svg';
