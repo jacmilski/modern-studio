@@ -36,6 +36,7 @@ module.exports = {
         spaceId: 'zeg7esyhyv8y',
       },
     },
+    'gatsby-plugin-lodash',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

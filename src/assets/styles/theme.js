@@ -1,6 +1,18 @@
 // @ts-nocheck
 /* eslint-disable linebreak-style */
-import { css } from 'styled-components';
+import { css, keyframes } from 'styled-components';
+
+const showLeftTopCorner = keyframes`
+  0% {
+    clip-path: polygon(16% 100%, 16% 100%, 16% 100%, 0 100%, 0 100%, 16% 100%);
+  }
+  50% {
+    clip-path: polygon(16% 16%, 16% 16%, 16% 100%, 0 100%, 0 0, 16% 0);
+  }
+  100% {
+    clip-path: polygon(100% 16%, 16% 16%, 16% 100%, 0 100%, 0 0, 100% 0);
+  }
+`;
 
 const theme = {
   color: {
@@ -58,25 +70,26 @@ const theme = {
         background-color: ${() => color};
         ${() => {
     switch (position) {
-      case 'leftTop':
+      case 'leftTop': // 0 0, 100% 0, 100% 16%, 16% 16%, 16% 100%, 0 100%
         return css`
-          clip-path: polygon(0 0, 100% 0, 100% 16%, 16% 16%, 16% 100%, 0 100%);
+          animation: ${showLeftTopCorner} 1.2s ease forwards;
+          clip-path: polygon(100% 16%, 16% 16%, 16% 100%, 0 100%, 0 0, 100% 0);
           left: ${distance};
           top: ${distance};
           `;
-      case 'rightTop':
+      case 'rightTop': // 0 0, 100% 0, 100% 100%, 84% 100%, 84% 16%, 0 16%
         return css`
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 84% 100%, 84% 16%, 0 16%);
+          clip-path: polygon(0 16%, 0 0, 100% 0, 100% 100%, 84% 100%, 84% 16%);
           right: ${distance};
           top: ${distance};
           `;
-      case 'leftBottom':
+      case 'leftBottom': // 0 0, 16% 0, 16% 84%, 100% 84%, 100% 100%, 0 100%
         return css`
           clip-path: polygon(0 0, 16% 0, 16% 84%, 100% 84%, 100% 100%, 0 100%);
           left: ${distance};
           bottom: ${distance};
           `;
-      case 'rightBottom':
+      case 'rightBottom': // 84% 0, 100% 0, 100% 100%, 0 100%, 0 84%, 84% 84%
         return css`
           clip-path: polygon(84% 0, 100% 0, 100% 100%, 0 100%, 0 84%, 84% 84%);
           right: ${distance};

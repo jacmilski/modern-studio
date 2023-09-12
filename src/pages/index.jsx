@@ -57,7 +57,7 @@ function HomePage({ data }) {
           <WelcomeSectionImage image={welcome} alt="" />
         </WelcomeSection>
         <AdvantagesSection>
-          <HighLightedHeading>Dlaczego szukasz właśnie nas?</HighLightedHeading>
+          <HighLightedHeading width="50" isRight>Dlaczego szukasz właśnie nas?</HighLightedHeading>
           <StyledList>
             <li>
               <h3>Kompleksowa obsługa</h3>
@@ -95,7 +95,7 @@ function HomePage({ data }) {
         </ShowcaseSection>
         <ServicesSection>
           <div>
-            <HighLightedHeading>Twój komfort ponad wszystko</HighLightedHeading>
+            <HighLightedHeading width="55">Twój komfort ponad wszystko</HighLightedHeading>
             <StyledLinkButtonWrapper>
               <StyledLinkButton to="#" isCentered>Sprawdź pełen zakres naszych usług</StyledLinkButton>
               <StyledArrowIcon />
@@ -123,7 +123,7 @@ function HomePage({ data }) {
         </ServicesSection>
         <TeamSection>
           <div>
-            <HighLightedHeading>Poznaj nasz zespół</HighLightedHeading>
+            <HighLightedHeading width="70" isRight>Poznaj nasz zespół</HighLightedHeading>
             <p>
               Dzięki doskonałej współpracy i przyjacielskiej atmosferze
               udało nam się stworzyć zespół dokosnały.
@@ -138,7 +138,7 @@ function HomePage({ data }) {
         </TeamSection>
         <ReviewSection>
           <div>
-            <HighLightedHeading>Co mówią o nas nasi klienci?</HighLightedHeading>
+            <HighLightedHeading width="65">Co mówią o nas nasi klienci?</HighLightedHeading>
             <p>Bezkompromisowo wspieramy naszych klientów a ich satysfakcja jest dla nas najważniejszym celem.</p>
           </div>
           <div>
@@ -153,7 +153,7 @@ function HomePage({ data }) {
           </div>
         </ReviewSection>
         <ContactForm action="#">
-          <HighLightedHeading level="3">Napisz do nas</HighLightedHeading>
+          <HighLightedHeading isRight width="70" level="3">Napisz do nas</HighLightedHeading>
           <label htmlFor="email">Adres e-mail</label>
           <input type="email" name="email" id="email" />
           <label htmlFor="message">Adres e-mail</label>

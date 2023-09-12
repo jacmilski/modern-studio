@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+// @ts-nocheck
+import styled, { css } from 'styled-components';
 import { ContentWrapper } from '../../../components/ContentWrapper/ContentWrapper.styles';
 
 export const StyledContentWrapper = styled(ContentWrapper)`
@@ -32,69 +33,42 @@ export const IntroSection = styled.section`
 
 export const PortfolioItem = styled.article`
   margin: 100px 0;
-  position: relative;
 
   img {
     width: 100%;
   }
 
   ${({ theme }) => theme.mq.desktop} {
+    margin: 150px 0;
     display: flex;
     align-items: center;
-    margin: 170px 0;
+    position: relative;
+    flex-direction: ${({ isOdd }) => (isOdd ? 'row-reverse' : 'row')};
 
     div {
       width: 50%;
-      padding-right: 80px;
+      padding: ${({ isOdd }) => (isOdd ? '0 0 0 80px' : '0 80px 0 0')};
     }
 
     img {
       width: 50%;
     }
-
-    &:nth-child(odd) {
-      ${({ theme }) => theme.effect.corner({
-    position: 'rightBottom', size: '100px', distance: '-30px', color: theme.color.black,
-  })};
-      div {
-        padding-right: 80px;
-      }
+    
+    p {
+      max-width: 80%;
     }
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-
-      ${({ theme }) => theme.effect.corner({
-    position: 'leftTop', size: '100px', distance: '-30px', color: theme.color.beige, pseudoelement: 'before',
-  })};
-
-      div {
-        padding-left: 80px;
-      }
-    }
-
-    &:last-child {
-      flex-direction: column;
+    
+    ${({ isFullWidth }) => (isFullWidth ? css`
       width: 100%;
-      &::after, &::before {
-        display: none;
-      }
-
+      flex-direction: column;
+      
       img {
         width: 100%;
       }
-
-      div:last-child {
-        width: 100%;
-        position: relative;
-
-        ${({ theme }) => theme.effect.corner({
-    position: 'rightTop', pseudoelement: 'after', size: '100px', distance: '-30px', color: theme.color.black,
-  })};
-
-        ${({ theme }) => theme.effect.corner({
-    position: 'leftBottom', pseudoelement: 'before', size: '100px', distance: '-30px', color: theme.color.beige,
-  })};
+      
+      p {
+        text-align: center;
+        margin: 0 auto;
       }
 
       div {
@@ -102,6 +76,6 @@ export const PortfolioItem = styled.article`
         margin: 30px auto;
         padding: 0;
       }
-    }
+    ` : null)};
   }
 `;
