@@ -33,7 +33,8 @@
     "react/destructuring-assignment": "warn",
     "no-debugger": "off",
     "jsx-a11y/label-has-associated-control": "warn",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "linebreak-style": "off"
   },
   "overrides": [
     {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
+import { ContentWrapper } from '../../../components/ContentWrapper/ContentWrapper.styles';
 
 export const Address = styled.p`
   font-weight: 700;
@@ -68,10 +68,12 @@ export const ContactDetails = styled.div`
 
 export const Gallery = styled.div`
   width: 100%;
+  margin: 0 auto;
   
   img {
     width: 100%;
     max-height: 400px;
+    object-fit: contain;
   }
 `;
 
