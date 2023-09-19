@@ -42,6 +42,7 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-root-import',

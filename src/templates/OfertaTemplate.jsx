@@ -1,20 +1,38 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 /* eslint-disable arrow-body-style */
 // @ts-nocheck
 import React from 'react';
+import styled from 'styled-components';
 import AreaIcon from 'assets/icons-components/area.svg';
 import AvailabilityIcon from 'assets/icons-components/availability.svg';
 import OfferTypeIcon from 'assets/icons-components/offer-type.svg';
 import RoomsIcon from 'assets/icons-components/rooms.svg';
 import BuildingTypeIcon from 'assets/icons-components/building-type.svg';
+import { graphql } from 'gatsby';
+import { Carousel } from 'react-responsive-carousel';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {
   Address, ContactDetails,
   Gallery, OfferDescription, OfferDetailsList,
   OfferTitle,
   StyledContentWrapper,
-} from 'assets/styles/pages/oferta.styles';
-import { graphql } from 'gatsby';
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
+} from '../assets/styles/pages/oferta.styles';
+
+const galleryOptions = {
+  showStatus: false,
+  showThumbs: false,
+  infiniteLoop: true,
+  width: '24%',
+};
+
+const StyledCarousel = styled(Carousel)`
+  .carousel.carousel-slider {
+    margin: 0 auto;
+  }
+`;
 
 const OfertaTemplate = ({ data: { oferta }, pageContext }) => {
   console.log('OfertaTemplate', pageContext?.id);
@@ -27,10 +45,16 @@ const OfertaTemplate = ({ data: { oferta }, pageContext }) => {
           {oferta.tytul}
         </HighlightedHeading>
       </OfferTitle>
-      <Gallery><img src={oferta.galeria[0].file.url} alt="" /></Gallery>
-      <OfferDescription>
-        {oferta.opis.opis}
-      </OfferDescription>
+      <Gallery>
+        <StyledCarousel {...galleryOptions}>
+          {oferta.galeria.map((item) => (
+            <img src={item.file.url} alt="" key={item.file.url} />
+          ))}
+        </StyledCarousel>
+      </Gallery>
+      <OfferDescription
+        dangerouslySetInnerHTML={{ __html: oferta.opis.childMarkdownRemark.html }}
+      />
       <OfferDetailsList>
         <li>
           <BuildingTypeIcon />
@@ -94,7 +118,9 @@ export const query = graphql`
       id
       imieINazwisko
       opis {
-        opis
+        childMarkdownRemark {
+          html
+        }
       }
       pomieszczenia
       powierzchnia

@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 import React from 'react';
 import Logo from '../../assets/icons-components/logo.svg';
-import { StyledIcon } from '../StyledIcon/StyledIcon';
 
 export const OuterWrapper = styled.div`
   display: flex;
@@ -69,18 +68,6 @@ export const StyledLogo = styled(({ isMobile, isSmall, ...props }) => <Logo {...
   ${({ theme }) => theme.mq.desktop} {
     display: ${({ isMobile }) => (isMobile ? 'none' : 'initial')};
     
-  }
-`;
-
-export const StyledSocialIcon = styled(StyledIcon)`
-  margin: 0 20px;
-  width: 50px;
-  height: 50px;
-  
-  ${({ theme }) => theme.mq.desktop} {
-    width: 25px;
-    height: 25px;
-    margin: 0 15px;
   }
 `;
 

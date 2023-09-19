@@ -1,12 +1,14 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import FacebookIcon from 'assets/icons-components/facebook.svg';
-import InstagramIcon from 'assets/icons-components/instagram.svg';
+import FacebookIcon from '../../assets/icons-components/facebook.svg';
+import InstagramIcon from '../../assets/icons-components/instagram.svg';
+import { StyledSocialIcon } from '../SocialIcon/SocialIcon.styles';
 import {
   OuterWrapper,
   StyledBurger,
   StyledLogo,
-  StyledNavigation, StyledSocialIcon,
+  StyledNavigation,
   Wrapper,
 } from './Navigation.styles';
 

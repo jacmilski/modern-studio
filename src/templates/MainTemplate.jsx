@@ -6,6 +6,7 @@ import { GlobalStyle } from 'assets/styles/GlobalStyles';
 import { theme } from 'assets/styles/theme';
 import { Navigation } from 'components/Navigation/Navigation';
 import 'assets/styles/normalize.css';
+import Footer from '../components/Footer/Footer';
 
 export const MainTemplate = ({ children }) => (
   <>
@@ -15,6 +16,7 @@ export const MainTemplate = ({ children }) => (
       <main>
         {children}
       </main>
+      <Footer />
     </ThemeProvider>
   </>
 );
