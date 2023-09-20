@@ -1,6 +1,6 @@
 // @ts-nocheck
 import * as React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { HighlightedHeading } from 'components/HighlightedHeading/HighlightedHeading';
 import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
 import {
@@ -80,8 +80,12 @@ const Homepage = ({ data }) => (
       <ShowcaseSection>
         <h2>Oferta</h2>
         <div>
-          <StyledButton isCentered>Bieżące oferty</StyledButton>
-          <StyledButton isCentered>Nasze realizacje</StyledButton>
+          <Link to="/oferty">
+            <StyledButton isCentered>Bieżące oferty</StyledButton>
+          </Link>
+          <Link to="/realizacje">
+            <StyledButton isCentered>Nasze realizacje</StyledButton>
+          </Link>
         </div>
         <ShowcaseGallery>
           <ShowcaseImage src={data.grid1.publicURL} alt="#" />

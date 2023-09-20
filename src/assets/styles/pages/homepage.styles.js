@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import arrowIcon from 'assets/icons/arrow.svg';
@@ -180,6 +181,11 @@ export const ShowcaseSection = styled(StyledSection)`
       flex-direction: row;
       justify-content: center;
     }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
   }
 `;
 
