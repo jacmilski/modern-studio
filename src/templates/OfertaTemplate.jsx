@@ -7,12 +7,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { Carousel } from 'react-responsive-carousel';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import AreaIcon from '../assets/icons-components/area.svg';
 import AvailabilityIcon from '../assets/icons-components/availability.svg';
 import OfferTypeIcon from '../assets/icons-components/offer-type.svg';
 import RoomsIcon from '../assets/icons-components/rooms.svg';
 import BuildingTypeIcon from '../assets/icons-components/building-type.svg';
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {
   Address, ContactDetails,

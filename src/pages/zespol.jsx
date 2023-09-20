@@ -1,10 +1,10 @@
 // @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import MailIcon from '../assets/icons-components/mail.svg';
 import PhoneIcon from '../assets/icons-components/phone.svg';
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import { Hero, InfoItem, InfoItemContent } from '../assets/styles/pages/zespol.styles';
 
 const Zespol = ({ data }) => (

@@ -2,8 +2,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
-import { IntroSection, PortfolioItem } from '../assets/styles/pages/realizacje.styles';
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
+import { IntroSection, PortfolioItem } from '../assets/styles/pages/realizacje.styles';
 import { CornerEffect } from '../components/CornerEffectProvider/CornerEffect';
 
 const Realizacje = ({ data }) => (

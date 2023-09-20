@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import {
   Hero, HeroImage, HeroInfo, ServicesStyledList,
 } from '../assets/styles/pages/uslugi.styles';
@@ -11,7 +12,6 @@ import KeyIcon from '../assets/icons-components/key.svg';
 import HeartIcon from '../assets/icons-components/heart.svg';
 import ConsultancyIcon from '../assets/icons-components/consultancy.svg';
 import BlocksIcon from '../assets/icons-components/blocks.svg';
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 
 const Uslugi = ({ data }) => (
   <ContentWrapper isSubpage>
