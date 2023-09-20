@@ -1,8 +1,8 @@
 // @ts-nocheck
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import arrowIcon from 'assets/icons/arrow.svg';
-import { StyledList } from 'components/StyledList/StyledList.styles';
+import arrowIcon from '../../icons/arrow.svg';
+import { StyledList } from '../../../components/StyledList/StyledList.styles';
 import { CornerEffect } from '../../../components/CornerEffectProvider/CornerEffect';
 
 export const StyledButton = styled.button`

@@ -1,9 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
 import { graphql } from 'gatsby';
-import MailIcon from 'assets/icons-components/mail.svg';
-import PhoneIcon from 'assets/icons-components/phone.svg';
+import MailIcon from '../assets/icons-components/mail.svg';
+import PhoneIcon from '../assets/icons-components/phone.svg';
+import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import { Hero, InfoItem, InfoItemContent } from '../assets/styles/pages/zespol.styles';
 

@@ -1,8 +1,7 @@
 // @ts-nocheck
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
-import { HighlightedHeading } from 'components/HighlightedHeading/HighlightedHeading';
-import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
+import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
 import {
   AdvantagesSection, ContactForm,
   Hero,
@@ -18,8 +17,9 @@ import {
   WelcomeSection,
   WelcomeSectionContent,
   WelcomeSectionImage,
-} from 'assets/styles/pages/homepage.styles';
-import { StyledList } from 'components/StyledList/StyledList.styles';
+} from '../assets/styles/pages/homepage.styles';
+import { StyledList } from '../components/StyledList/StyledList.styles';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 
 const Homepage = ({ data }) => (
   <>

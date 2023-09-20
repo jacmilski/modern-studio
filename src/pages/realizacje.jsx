@@ -1,9 +1,9 @@
 // @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
-import { HighlightedHeading } from 'components/HighlightedHeading/HighlightedHeading';
 import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
-import { IntroSection, PortfolioItem } from 'assets/styles/pages/realizacje.styles';
+import { IntroSection, PortfolioItem } from '../assets/styles/pages/realizacje.styles';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import { CornerEffect } from '../components/CornerEffectProvider/CornerEffect';
 
 const Realizacje = ({ data }) => (

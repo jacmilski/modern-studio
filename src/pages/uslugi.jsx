@@ -1,16 +1,16 @@
 // @ts-nocheck
 import React from 'react';
-import BlocksIcon from 'assets/icons-components/blocks.svg';
-import ConsultancyIcon from 'assets/icons-components/consultancy.svg';
-import HeartIcon from 'assets/icons-components/heart.svg';
-import KeyIcon from 'assets/icons-components/key.svg';
-import PeopleIcon from 'assets/icons-components/people.svg';
-import SuitcaseIcon from 'assets/icons-components/suitcase.svg';
 import { graphql } from 'gatsby';
-import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
 import {
   Hero, HeroImage, HeroInfo, ServicesStyledList,
-} from 'assets/styles/pages/uslugi.styles';
+} from '../assets/styles/pages/uslugi.styles';
+import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
+import SuitcaseIcon from '../assets/icons-components/suitcase.svg';
+import PeopleIcon from '../assets/icons-components/people.svg';
+import KeyIcon from '../assets/icons-components/key.svg';
+import HeartIcon from '../assets/icons-components/heart.svg';
+import ConsultancyIcon from '../assets/icons-components/consultancy.svg';
+import BlocksIcon from '../assets/icons-components/blocks.svg';
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 
 const Uslugi = ({ data }) => (

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 import arrowIcon from '../../icons/arrow.svg';
 import { StyledList } from '../../../components/StyledList/StyledList.styles';

@@ -2,10 +2,10 @@
 // @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
-import { HighlightedHeading } from 'components/HighlightedHeading/HighlightedHeading';
-import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
-import { FiltersList, Gallery, IntroSection } from 'assets/styles/pages/oferty.styles';
-import { Thumbnail } from 'components/Thumbnail/Thumbnail';
+import { FiltersList, Gallery, IntroSection } from '../assets/styles/pages/oferty.styles';
+import { Thumbnail } from '../components/Thumbnail/Thumbnail';
+import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 
 const Oferty = ({ data: { allContentfulOferta: { nodes: oferty } } }) => {
   console.log('Oferty', oferty);

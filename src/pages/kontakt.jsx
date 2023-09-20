@@ -5,7 +5,7 @@ import {
   ContactContentWrapper,
   ContactInfoWrapper,
   ContactPhoto,
-} from 'assets/styles/pages/kontakt.styles';
+} from '../assets/styles/pages/kontakt.styles';
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
 import PhoneIcon from '../assets/icons-components/phone.svg';
 import { ContactForm, StyledButton } from '../assets/styles/pages/homepage.styles';
