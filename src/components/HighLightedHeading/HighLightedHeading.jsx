@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import throttle from 'lodash.throttle';
 import { StyledHeading } from './HighlightedHeading.styles';
 
-export const HighlightedHeading = ({
+const HighlightedHeading = ({
   width, level = '2', children, isRight = false, ...props
 }) => {
   const headingRef = useRef(null);
@@ -36,3 +36,5 @@ HighlightedHeading.propTypes = {
   isRight: PropTypes.bool,
   width: PropTypes.string,
 };
+
+export default HighlightedHeading;

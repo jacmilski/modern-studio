@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
+import HighlightedHeading from '../components/HighlightedHeading/HighlightedHeading';
 import {
   ContactContentWrapper,
   ContactInfoWrapper,

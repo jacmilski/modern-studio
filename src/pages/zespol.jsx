@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { graphql } from 'gatsby';
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
+import HighlightedHeading from '../components/HighlightedHeading/HighlightedHeading';
 import MailIcon from '../assets/icons-components/mail.svg';
 import PhoneIcon from '../assets/icons-components/phone.svg';
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
