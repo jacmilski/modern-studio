@@ -7,7 +7,7 @@ const slugify = require('slugify');
 exports.onPostBuild = ({ reporter }) => {
   reporter.info('Your Gatsby site has been built!');
 };
-// Create blog pages dynamically
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const OfertaTemplate = path.resolve('src/templates/OfertaTemplate.jsx');
